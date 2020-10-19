@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://www.example.org/wsdl/1555435758268" xmlns:tns0="http://www.example.org/schema/1555435758546" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Process" targetNamespace="http://www.example.org/wsdl/1555435758268">
+  <wsdl:types>
+    <xsd:schema xmlns="http://www.example.org/schema/1555435758546" elementFormDefault="unqualified" targetNamespace="http://www.example.org/schema/1555435758546">
+      <xsd:element name="operationRequest">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="in" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="operationResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+          	<xsd:element name="image" type="xsd:string" />
+          	<xsd:element name="results" minOccurs="0" maxOccurs="unbounded">
+          		<xsd:complexType>
+          			<xsd:sequence>
+          				<xsd:element name="name" type="xsd:string">
+          				</xsd:element>
+          				<xsd:element name="score"
+          					type="xsd:string">
+          				</xsd:element>
+          			</xsd:sequence>
+          		</xsd:complexType>
+          	</xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="operationRequest">
+    <wsdl:part element="tns0:operationRequest" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="operationResponse">
+    <wsdl:part element="tns0:operationResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:portType name="Process">
+    <wsdl:operation name="operation">
+      <wsdl:input message="tns:operationRequest" name="operationInput"/>
+      <wsdl:output message="tns:operationResponse" name="operationOutput"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SOAPServiceBinding" type="tns:Process">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="operation">
+      <soap:operation soapAction="operation" style="document"/>
+      <wsdl:input>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Process">
+    <wsdl:port binding="tns:SOAPServiceBinding" name="ProcessSOAP">
+      <soap:address location="http://localhost:5000/SOAPServiceBinding/process/"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

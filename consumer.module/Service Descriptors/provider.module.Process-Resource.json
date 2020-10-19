@@ -1,0 +1,78 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "1.0",
+    "title" : "Summary about the new REST service.",
+    "description" : "Summary about the new REST service."
+  },
+  "host" : "0.0.0.0:8080",
+  "basePath" : "/",
+  "schemes" : [ "http" ],
+  "paths" : {
+    "/resource1" : {
+      "post" : {
+        "summary" : "",
+        "description" : "",
+        "operationId" : "post-resource1",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "$ref" : "#/definitions/operationRequest"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a operationResponse to be returned",
+            "schema" : {
+              "$ref" : "#/definitions/operationResponse"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "operationRequest" : {
+      "type" : "object",
+      "required" : [ "in" ],
+      "properties" : {
+        "in" : {
+          "type" : "string"
+        }
+      }
+    },
+"operationResponse" : {
+      "type" : "object",
+      "required" : [ "image" ],
+      "properties" : {
+        "image" : {
+          "type" : "string"
+        },
+        "results" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/results",
+            "uniqueItems" : false
+          }
+        }
+      }
+    },
+    "results" : {
+      "type" : "object",
+      "required" : [ "score", "name" ],
+      "properties" : {
+        "name" : {
+          "type" : "string"
+        },
+        "score" : {
+          "type" : "string"
+        }
+      }
+    }
+  }
+}

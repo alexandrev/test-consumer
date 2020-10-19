@@ -1,0 +1,23 @@
+Manifest-Version: 1.0.0.202010191333
+Bundle-SymbolicName: consumer.module
+Require-Bundle: bw.core_common_kafka.sharedmodule;bundle-version="4.0.
+ 4.202010161712"
+Bundle-ManifestVersion: 2
+TIBCO-BW-Edition: bwcf
+Bundle-Vendor: TIBCO Software Inc.
+TIBCO-BW-ModuleSharedVariables: META-INF/module.msv
+Require-Capability: com.tibco.bw.model; filter:="(name=bwext)",com.tib
+ co.bw.module; filter:="(&(name=bw.core_common_kafka.sharedmodule)(ver
+ sion=1.0.0))",com.tibco.bw.palette; filter:="(name=bw.generalactiviti
+ es)",com.tibco.bw.sharedresource.model; filter:="(name=bw.httpclient)
+ ",com.tibco.bw.sharedresource.model; filter:="(name=bw.httpconnector)
+ ",com.tibco.bw.binding.model; filter:="(name=bw.soap)",com.tibco.bw.b
+ inding.model; filter:="(name=bw.rest.reference.binding)"
+TIBCO-BW-ConfigProfile: META-INF/default.substvar
+TIBCO-BW-Version: 2.4.2 HFEB8 V110 2019-03-18
+Bundle-Name: Frontend Module
+Bundle-Version: 1.0.0.202010191333
+Bundle-ClassPath: .,lib/bw.core_common.xpath-4.0.4-SNAPSHOT.jar
+TIBCO-BW-ApplicationModule: META-INF/module.bwm
+TIBCO-BW-JobSharedVariables: META-INF/module.jsv
+

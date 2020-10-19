@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema elementFormDefault="qualified"
+	targetNamespace="/T1570353682705Converted/JsonSchema" xmlns:tns="/T1570353682705Converted/JsonSchema"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="operationRequest" type="tns:operationRequest" />
+	<xs:complexType name="operationRequest">
+		<xs:sequence>
+			<xs:element name="in" type="xs:string" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="operationResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="image" type="xs:string" />
+				<xs:element name="results" minOccurs="0" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="name" type="xs:string">
+							</xs:element>
+							<xs:element name="score" type="xs:string">
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

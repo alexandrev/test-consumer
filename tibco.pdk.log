@@ -1,0 +1,107 @@
+
+>>> 
+>>> Installation of palette "ESBAudit" (19/10/20 11:45)
+>>> 
+
+
+*** Executing target: delete-ext-palette-link
+
+delete-ext-palette-link:
+
+BUILD SUCCESSFUL
+Total time: 0 seconds
+
+*** Executing target: create-ext-palette-link
+
+create-ext-palette-link:
+     [copy] Copying 1 file to C:\tibco\bw\661\bw\6.6\ext\palettes
+
+BUILD SUCCESSFUL
+Total time: 0 seconds
+
+*** Executing target: install-ext-palette-design
+
+-validate-ext-palette:
+
+-init-ext-palette-bwp2:
+
+-init-bwp2:
+
+-init-bw:
+
+-check-if-bw-core-exists:
+     [echo] product.properties : C:\tibco\bw\661\eclipse-platform\bundlepool\1.0\org.eclipse.equinox.p2.touchpoint.eclipse\plugins\com.tibco.bw.thor.launch_1.3.900.001\product.properties
+     [echo] old bw.home : C:/tibco/bw/661/bw/6.6
+   [delete] Deleting: C:\tibco\bw\661\bw\6.6\scripts\staging\design.properties
+     [copy] Copying 1 file to C:\tibco\bw\661\bw\6.6\scripts\staging
+
+-list-installed-roots:
+     [echo] Profile: TIBCOBusinessStudio-4.0
+     [echo] Java: C:\tibco\bw\661\tibcojre64\1.8.0\bin\java
+
+-check-if-ext-upgrade-scenario:
+
+-delete-p2repo:
+
+-create-bwp2-repo:
+     [echo] source: C:\tibco\bw\661\bw\palettes\ESBAudit\1.0\design
+     [echo] Repo: C:\tibco\bw\661\bw\palettes\ESBAudit\1.0\p2repos
+     [echo] Java: C:\tibco\bw\661\tibcojre64\1.8.0\bin\java
+     [java] Generating metadata for ..
+     [java] Generation completed with success [0 seconds].
+
+-install-bw-design:
+     [echo] Repo: file:/C:/tibco/bw/661/bw/palettes/ESBAudit/1.0/p2repos/
+     [echo] Java: C:\tibco\bw\661\tibcojre64\1.8.0\bin\java
+     [echo] IUs: com.tibcopsg.bw.esb.framework.audit.palette.esbaudit.design.feature.feature.group,com.tibcopsg.bw.esb.framework.audit.palette.esbaudit.model.feature.feature.group
+     [echo] bwp2.product.destination.dir:C:\tibco\bw\661\studio\4.0\eclipse
+     [echo] bwp2.product.profile:TIBCOBusinessStudio-4.0
+     [echo] bwp2.bundle.pool:C:\tibco\bw\661\eclipse-platform\bundlepool\1.0\org.eclipse.equinox.p2.touchpoint.eclipse
+     [echo] bwp2.product.destination.dirbwp2.agent.location:C:/tibco/bw/661/eclipse-platform/bundlepool/1.0
+     [echo] bwp2.tag.install.features:Tibco BW6 Plugin ESBAudit
+     [echo] bwp2.agent-runtime.dir:C:/tibco/bw/661/tools/p2director/eclipse
+     [echo] bwp2.launcher.version:1.3.0.v20140415-2008
+     [echo] bwp2.design.repo.url:{bwp2.design.repo.url}
+     [java] Installing com.tibcopsg.bw.esb.framework.audit.palette.esbaudit.design.feature.feature.group 1.0.0.v1811160211.
+     [java] Installing com.tibcopsg.bw.esb.framework.audit.palette.esbaudit.model.feature.feature.group 1.0.0.v1811160211.
+     [java] Operation completed in 23330 ms.
+
+-upgrade-bw-design:
+
+install-ext-palette-design:
+
+BUILD SUCCESSFUL
+Total time: 45 seconds
+
+*** Executing target: setup-bwthor-launch
+
+-init-bw:
+
+setup-bwthor-launch:
+
+-setup-bwthor-launch:
+[setupbwthorlaunch] ==>TIBCO Home: C:/tibco/bw/661
+[setupbwthorlaunch] ==>BW Home: C:/tibco/bw/661/bw/6.6
+[setupbwthorlaunch] ==>BW Thor provisioning properties: C:/tibco/bw/661/eclipse-platform/bundlepool/1.0/org.eclipse.equinox.p2.touchpoint.eclipse/plugins/com.tibco.bw.thor.launch_1.3.900.001/provisioning.properties
+==>INFO: Scanning bundles under: C:\tibco\bw\661\bw\6.6\system\hotfix\lib\common
+==>INFO: Scanning bundles under: C:\tibco\bw\661\bw\6.6\system\lib\common
+==>INFO: Scanning bundles under: C:\tibco\bw\661\bw\6.6\system\hotfix\shared
+==>INFO: Scanning bundles under: C:\tibco\bw\661\bw\6.6\system\shared
+==>INFO: Scanning bundles under: C:\tibco\bw\661\bw\6.6\system\hotfix\palettes
+==>INFO: Scanning bundles under: C:\tibco\bw\661\bw\6.6\system\palettes
+[setupbwthorlaunch] ==>INFO: Link : com.tibco.bw.palette.ESBAudit.link, Name: 'Tibco BW6 Plugin ESBAudit', Location: /C:/tibco/bw/661/bw/palettes/ESBAudit/1.0/
+==>INFO: ***Folder does not exist: C:\tibco\bw\661\bw\palettes\ESBAudit\1.0\hotfix\runtime\plugins
+==>INFO: Scanning bundles under: C:\tibco\bw\661\bw\palettes\ESBAudit\1.0\runtime\plugins
+[setupbwthorlaunch] ==>INFO: Link : com.tibco.bw.palette.kafka.link, Name: 'TIBCO BW Kafka Palette', Location: /C:/tibco/bw/661/bw/palettes/kafka/6.4/
+==>INFO: Scanning bundles under: C:\tibco\bw\661\bw\palettes\kafka\6.4\hotfix\runtime\plugins
+==>INFO: Scanning bundles under: C:\tibco\bw\661\bw\palettes\kafka\6.4\runtime\plugins
+     [copy] Copying 1 file to C:\tibco\bw\661\eclipse-platform\bundlepool\1.0\org.eclipse.equinox.p2.touchpoint.eclipse\plugins\com.tibco.bw.thor.launch_1.3.900.001
+     [copy] Copying 1 file to C:\tibco\bw\661\eclipse-platform\bundlepool\1.0\org.eclipse.equinox.p2.touchpoint.eclipse\plugins\com.tibco.bw.thor.launch_1.3.900.001
+     [copy] Copying 1 file to C:\tibco\bw\661\eclipse-platform\bundlepool\1.0\org.eclipse.equinox.p2.touchpoint.eclipse\plugins\com.tibco.bw.thor.launch_1.3.900.001
+     [copy] Copying 1 file to C:\tibco\bw\661\eclipse-platform\bundlepool\1.0\org.eclipse.equinox.p2.touchpoint.eclipse\plugins\com.tibco.bw.thor.launch_1.3.900.001
+     [copy] Copying 1 file to C:\tibco\bw\661\eclipse-platform\bundlepool\1.0\org.eclipse.equinox.p2.touchpoint.eclipse\plugins\com.tibco.bw.thor.launch_1.3.900.001
+
+BUILD SUCCESSFUL
+Total time: 1 second
+
+<<< Installation of palette "ESBAudit" completed successfully (19/10/20 11:46)

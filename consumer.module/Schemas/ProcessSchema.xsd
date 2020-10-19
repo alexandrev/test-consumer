@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.example.org/schema/1555435758546"
+	xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	elementFormDefault="unqualified" targetNamespace="http://www.example.org/schema/1555435758546">
+	<element name="operationRequest">
+		<complexType>
+			<sequence>
+				<element name="in" type="string" />
+			</sequence>
+		</complexType>
+	</element>
+	<element name="operationResponse">
+		<complexType>
+			<sequence>
+				<element name="image" type="string" />
+				<element name="results" minOccurs="0" maxOccurs="unbounded">
+					<complexType>
+						<sequence>
+							<element name="name" type="string">
+							</element>
+							<element name="score" type="string">
+							</element>
+						</sequence>
+					</complexType>
+				</element>
+			</sequence>
+		</complexType>
+	</element>
+</schema>

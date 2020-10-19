@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<completeReportDTO>
+    <moduleResult xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="testSuiteResultDTO">
+        <codeCoverage xsi:type="processCoverageDTO">
+            <activityCoverage xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string">Mapper</activityCoverage>
+            <activityCoverage xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string">Start</activityCoverage>
+            <activityCoverage xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string">End</activityCoverage>
+            <moduleName>consumer.module</moduleName>
+            <processName>consumer.module.SubProcess</processName>
+            <transitionCoverage xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string">StartToEnd</transitionCoverage>
+            <transitionCoverage xmlns:xs="http://www.w3.org/2001/XMLSchema" xsi:type="xs:string">MapperToEnd</transitionCoverage>
+        </codeCoverage>
+        <moduleInfo>
+            <appName>consumer</appName>
+            <appVersion>1.0</appVersion>
+            <moduleName>consumer.module</moduleName>
+            <moduleVersion>1.0.0.qualifier</moduleVersion>
+        </moduleInfo>
+        <testSetResult xsi:type="testSetResultDTO">
+            <packageName>consumer.module</packageName>
+            <processName>consumer.module.SubProcess</processName>
+            <testCaseResult xsi:type="testCaseResultDTO">
+                <assertionFailure>0</assertionFailure>
+                <assertionResult xsi:type="assertionResultDTO">
+                    <activityName>Mapper</activityName>
+                    <activityOutput></activityOutput>
+                    <assertionMode>Primitive</assertionMode>
+                    <assertionStatus>passed</assertionStatus>
+                    <endElementNameTag>&lt;/tns:name&gt;</endElementNameTag>
+                    <goldInput>&lt;tns:name&gt;1&lt;/tns:name&gt;</goldInput>
+                    <instanceId>bw0a100</instanceId>
+                    <message></message>
+                    <startElementNameTag>&lt;tns:name&gt;</startElementNameTag>
+                </assertionResult>
+                <assertions>1</assertions>
+                <assertionsRun>1</assertionsRun>
+                <processFailures>0</processFailures>
+                <testCaseFile>/consumer.module/Tests/consumer.module1.bwt</testCaseFile>
+            </testCaseResult>
+        </testSetResult>
+        <showFailureDetails>false</showFailureDetails>
+    </moduleResult>
+</completeReportDTO>

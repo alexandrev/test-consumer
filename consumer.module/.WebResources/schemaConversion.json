@@ -1,0 +1,21 @@
+{"records": [
+    {
+        "jsonSchemaLocation": "/consumer.module/Service Descriptors/provider.module.Process-Resource.json",
+        "conversionType": "generated",
+        "xsdSchemaTargetNamespace": "/T1570353682705Converted/JsonSchema"
+    },
+    {
+        "jsonSchemaLocation": "/consumer.module/Service Descriptors/consumer.module.Resource-Resource.json",
+        "conversionType": "linked",
+        "xsdSchemaLocation": "/consumer.module/Schemas/ProcessSchema.xsd",
+        "xsdSchemaTargetNamespace": "http://www.example.org/schema/1555435758546"
+    },
+    {
+        "jsonSchemaLocation": "/consumer.module/Service Descriptors/consumer.module.Resource-Resource.json",
+        "conversionType": "linked"
+    },
+    {
+        "jsonSchemaLocation": "/consumer.module/Service Descriptors/consumer.module.Resource-Resource.json",
+        "conversionType": "linked"
+    }
+]}

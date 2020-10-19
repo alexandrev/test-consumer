@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" factory="com.tibco.xml.cxf.user.http_com.tibcopsg.tibcobw.customfunctions.time_" name="ccxf.user.http_com.tibcopsg.tibcobw.customfunctions.time_">
+   <implementation class="com.tibcopsg.tibcobw.customfunctions.bw.FTime"/>
+</scr:component>

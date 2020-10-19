@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: BW Custom Function - BW misc
+Bundle-SymbolicName: bw.core_common.xpath;singleton:=true
+Bundle-Version: 4.0.4.qualifier
+Bundle-Vendor: TIBCO PSG
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Import-Package: com.tibco.xml.cxf.common.annotations
+Service-Component: OSGI-INF/cxf.xml

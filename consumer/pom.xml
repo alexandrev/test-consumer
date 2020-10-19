@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.tibco.bw</groupId>
+    <artifactId>consumer.parent</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <relativePath>../consumer.parent</relativePath>
+  </parent>
+  <artifactId>consumer</artifactId>
+  <packaging>bwear</packaging>
+  <properties>
+    <skipTests>false</skipTests>
+    <project.type>None</project.type>
+    <bw.Home>/bw/6.6</bw.Home>
+    <!--  bw.Home>/bwce/2.5</bw.Home -->
+    <failIfNoTests>false</failIfNoTests>
+    <tibco.Home>/opt/tibco/bw</tibco.Home>
+    <!--  tibco.Home>C:/tibco/bw/661</tibco.Home-->
+  </properties>
+  <dependencies>
+  </dependencies>
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>com.tibco.plugins</groupId>
+        <artifactId>bw6-maven-plugin</artifactId>
+        <version>2.7.1</version>
+        <extensions>true</extensions>
+      </plugin>
+    </plugins>
+  </build>
+  <reporting>
+    <plugins>
+      <plugin>
+        <groupId>com.tibco.plugins</groupId>
+        <artifactId>bw6-maven-plugin</artifactId>
+        <version>2.7.1</version>
+      </plugin>
+    </plugins>
+  </reporting>
+</project>

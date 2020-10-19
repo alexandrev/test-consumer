@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sca:composite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:BW="http://xsd.tns.tibco.com/amf/models/sca/implementationtype/BW" xmlns:XMLSchema="http://www.w3.org/2001/XMLSchema" xmlns:axis2="http://xsd.tns.tibco.com/bw/models/binding/soap/axis2" xmlns:compositeext="http://schemas.tibco.com/amx/3.0/compositeext" xmlns:pt="http://www.example.org/wsdl/1555435758268" xmlns:rest="http://xsd.tns.tibco.com/bw/models/binding/rest" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmlns:scact="http://xsd.tns.tibco.com/amf/models/sca/componentType" xmlns:scaext="http://xsd.tns.tibco.com/amf/models/sca/extensions" xmlns:schema_1555435758546="http://www.example.org/schema/1555435758546" xmi:id="_lQmLgF4MEem4_KHajN2SSQ" targetNamespace="http://tns.tibco.com/bw/composite/consumer.module" name="consumer.module" compositeext:version="1.0.0" compositeext:formatVersion="2">
+  <sca:service xmi:id="_L64TsGBtEemuj-Xd-nM4xg" name="Process" promote="ComponentProcess/Process">
+    <sca:interface.wsdl xmi:id="_L7O5AGBtEemuj-Xd-nM4xg" interface="http://www.example.org/wsdl/1555435758268#wsdl.interface(Process)" scaext:wsdlLocation="../Service%20Descriptors/Process.wsdl"/>
+    <scaext:binding xsi:type="axis2:SOAPServiceBinding" xmi:id="_2Ezi0GBtEemuj-Xd-nM4xg" name="SOAPServiceBinding" targetNamespace="http://www.tibco.com/2955e49216594a13a8bcf65ccb0d0d51/SOAPServiceBinding" portTypeQName="pt:Process" transportBindingType="HTTP" attachmentStyle="SwA" modelVersion="1.2.0" portTypeWSDLLocation="platform:/resource/consumer.module/Service%20Descriptors/Process.wsdl">
+      <bindingType xmi:id="_2E8FsGBtEemuj-Xd-nM4xg"/>
+      <inboundConfiguration xsi:type="axis2:HttpTransportConfiguration" xmi:id="_7w80wGEGEemuj-Xd-nM4xg" endpointURI="/SOAPServiceBinding/process/" httpConnector="consumer.module.HTTPConnectorResource"/>
+      <operationConfiguration xmi:id="_2FCMUGBtEemuj-Xd-nM4xg" operationName="operation" action="operation" actionNeeded="true">
+        <bindingType xmi:id="_2FCMUWBtEemuj-Xd-nM4xg"/>
+        <messageConfiguration xmi:id="_2FCMUmBtEemuj-Xd-nM4xg" messageQName="pt:operationRequest" wsdlLocation="platform:/resource/consumer.module/Service%20Descriptors/Process.wsdl">
+          <messagePartConfigurations xsi:type="axis2:BodyPartConfiguration" xmi:id="_2FCMU2BtEemuj-Xd-nM4xg" partName="parameters" partElementName="schema_1555435758546:operationRequest"/>
+        </messageConfiguration>
+        <messageConfiguration xmi:id="_2FCMVGBtEemuj-Xd-nM4xg" messageQName="pt:operationResponse" messageDirection="OUTPUT" wsdlLocation="platform:/resource/consumer.module/Service%20Descriptors/Process.wsdl">
+          <messagePartConfigurations xsi:type="axis2:BodyPartConfiguration" xmi:id="_2FCMVWBtEemuj-Xd-nM4xg" partName="parameters" partElementName="schema_1555435758546:operationResponse"/>
+        </messageConfiguration>
+        <context xmi:id="_2FDacGBtEemuj-Xd-nM4xg">
+          <inputMapping xmi:id="_2FEokGBtEemuj-Xd-nM4xg" parameterName="parameter" expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xA;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns=&quot;http://tns.tibco.com/bw/REST&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;TransportProperties&quot;/>&lt;xsl:template name=&quot;parameter&quot; match=&quot;/&quot;>&lt;tns:httpHeaders>&lt;xsl:if test=&quot;$TransportProperties/Headers/accept&quot;>&lt;Accept>&lt;xsl:value-of select=&quot;$TransportProperties/Headers/accept&quot;/>&lt;/Accept>&lt;/xsl:if>&lt;xsl:if test=&quot;$TransportProperties/Headers/accept-charset&quot;>&lt;Accept-Charset>&lt;xsl:value-of select=&quot;$TransportProperties/Headers/accept-charset&quot;/>&lt;/Accept-Charset>&lt;/xsl:if>&lt;xsl:if test=&quot;$TransportProperties/Headers/accept-encoding&quot;>&lt;Accept-Encoding>&lt;xsl:value-of select=&quot;$TransportProperties/Headers/accept-encoding&quot;/>&lt;/Accept-Encoding>&lt;/xsl:if>&lt;xsl:if test=&quot;$TransportProperties/Headers/content-type&quot;>&lt;Content-Type>&lt;xsl:value-of select=&quot;$TransportProperties/Headers/content-type&quot;/>&lt;/Content-Type>&lt;/xsl:if>&lt;xsl:if test=&quot;$TransportProperties/Headers/content-length&quot;>&lt;Content-Length>&lt;xsl:value-of select=&quot;$TransportProperties/Headers/content-length&quot;/>&lt;/Content-Length>&lt;/xsl:if>&lt;xsl:if test=&quot;$TransportProperties/Headers/connection&quot;>&lt;Connection>&lt;xsl:value-of select=&quot;$TransportProperties/Headers/connection&quot;/>&lt;/Connection>&lt;/xsl:if>&lt;xsl:if test=&quot;$TransportProperties/Headers/cookie&quot;>&lt;Cookie>&lt;xsl:value-of select=&quot;$TransportProperties/Headers/cookie&quot;/>&lt;/Cookie>&lt;/xsl:if>&lt;xsl:if test=&quot;$TransportProperties/Headers/pragma&quot;>&lt;Pragma>&lt;xsl:value-of select=&quot;$TransportProperties/Headers/pragma&quot;/>&lt;/Pragma>&lt;/xsl:if>&lt;xsl:copy-of select=&quot;$TransportProperties/DynamicHeaders&quot;/>&lt;/tns:httpHeaders>&lt;/xsl:template>&lt;/xsl:stylesheet>"/>
+          <outputMapping xmi:id="_2FEokWBtEemuj-Xd-nM4xg" direction="OUTPUT"/>
+        </context>
+      </operationConfiguration>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_2FFPoGBtEemuj-Xd-nM4xg" bindingName="SOAPServiceBinding"/>
+  </sca:service>
+  <sca:property xmi:id="_nNcSsF4MEem4_KHajN2SSQ" name="BW.APPNODE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_nOKEYF4MEem4_KHajN2SSQ" name="BW.DEPLOYMENTUNIT.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_nOVDgF4MEem4_KHajN2SSQ" name="BW.HOST.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_nOteAF4MEem4_KHajN2SSQ" name="BW.DEPLOYMENTUNIT.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_nO3PAF4MEem4_KHajN2SSQ" name="BW.MODULE.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_nPjLgF4MEem4_KHajN2SSQ" name="BW.CLOUD.PORT" type="XMLSchema:int" scalable="true"/>
+  <sca:property xmi:id="_nQFXAF4MEem4_KHajN2SSQ" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_mlrdMF4OEem4_KHajN2SSQ" name="PROVIDER_HOST" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_nkenwF4OEem4_KHajN2SSQ" name="PROVIDER_PORT" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_pyYCsF4OEem4_KHajN2SSQ" name="CONSUMER_PORT" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
+  <sca:component xmi:id="_mVunkF4MEem4_KHajN2SSQ" name="ComponentProcess" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_mVwcwF4MEem4_KHajN2SSQ" processName="consumer.module.Process"/>
+    <sca:service xmi:id="_L6sGcGBtEemuj-Xd-nM4xg" name="Process">
+      <sca:interface.wsdl xmi:id="_L6t7oGBtEemuj-Xd-nM4xg" interface="http://www.example.org/wsdl/1555435758268#wsdl.interface(Process)" scaext:wsdlLocation="../Service%20Descriptors/Process.wsdl"/>
+    </sca:service>
+  </sca:component>
+</sca:composite>

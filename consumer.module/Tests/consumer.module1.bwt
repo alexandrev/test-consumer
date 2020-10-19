@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<emulation:EmulationData xmlns:emulation="http:///emulation.ecore" isBW="true" location="/consumer.module/Tests/consumer.module1.bwt">
+  <ProcessNode Id="consumer.module.SubProcess" Name="consumer.module.SubProcess" ModelType="BW" moduleName="consumer.module">
+    <Assertion Id="373657f7-ef2d-4851-8178-a04248d8a2cb" Name="Mapper" hasDecoration="true">
+      <Lang>urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0</Lang>
+      <Expression>
+&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns=&quot;http://www.example.com/namespaces/tns/1602493329712&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;Mapper&quot;/>&lt;xsl:template match=&quot;/&quot;>&lt;xsl:choose>&lt;xsl:when test=&quot;$Mapper/tns:name='1'&quot;>&lt;result status=&quot;passed&quot; message=&quot;Assertion passed.&quot;/>&lt;/xsl:when>&lt;xsl:otherwise>&lt;result status=&quot;failed&quot; message=&quot;Assertion failed.&quot;/>&lt;/xsl:otherwise>&lt;/xsl:choose>&lt;/xsl:template>&lt;/xsl:stylesheet></Expression>
+      <OriginalExpression>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>
+&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns=&quot;http://www.example.com/namespaces/tns/1602493329712&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;Mapper&quot;/>&lt;xsl:template name=&quot;Mapper&quot; match=&quot;/&quot;>&lt;Primitive-Assertion>&lt;AssertType>&lt;string>&lt;testInput>&lt;xsl:value-of select=&quot;$Mapper/tns:name&quot;/>&lt;/testInput>&lt;goldInput>&lt;xsl:value-of select=&quot;&amp;quot;1&amp;quot;&quot;/>&lt;/goldInput>&lt;/string>&lt;/AssertType>&lt;/Primitive-Assertion>&lt;/xsl:template>&lt;/xsl:stylesheet></OriginalExpression>
+    </Assertion>
+    <Operation Name="callProcess" serviceName="consumer.module.SubProcess">
+      <Inputs Id="94a350c7-9687-438f-bfad-2afdf782fc3cconsumer.module_consumer.module.SubProcess_callProcess_Start" Name="Start" isDefault="true" type="CALLPROCESS">
+        <informations Name="input" nameSpace="http://www.example.com/namespaces/tns/1602493329712">
+          <nameSpaces prefix="tns" nameSapce="http://www.example.com/namespaces/tns/1602493329712"/>
+          <Parameter Name="tns:Element">
+            <parameters Name="tns:name" Value="1" type="string" nameSpace="http://www.example.com/namespaces/tns/1602493329712"/>
+            <parameters Name="tns:number" Value="2" type="integer" nameSpace="http://www.example.com/namespaces/tns/1602493329712" canDelete="true"/>
+            <parameters Name="tns:flag" Value="true" type="boolean" nameSpace="http://www.example.com/namespaces/tns/1602493329712" canDelete="true"/>
+          </Parameter>
+        </informations>
+      </Inputs>
+      <resolvedInput inputValue="&lt;tns:Element xmlns:tns='http://www.example.com/namespaces/tns/1602493329712' >&lt;tns:name>1&lt;/tns:name>&lt;tns:number>2&lt;/tns:number>&lt;tns:flag>&lt;/tns:flag>&lt;/tns:Element>"/>
+    </Operation>
+  </ProcessNode>
+</emulation:EmulationData>
